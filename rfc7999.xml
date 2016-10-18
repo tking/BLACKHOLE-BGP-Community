@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<?rfc comments="yes"?>
+<?rfc compact="yes"?>
+<?rfc inline="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc subcompact="no"?>
+<?rfc symrefs="yes"?>
+<?rfc toc="yes"?>
+<?rfc tocdepth="3"?>
+<?rfc tocindent="yes"?>
+<?rfc tocompact="yes"?>
+
+<rfc number="7999" category="info" submissionType="IETF" consensus="yes">
+    <front>
+
+
+        <title abbrev="BLACKHOLE Community">BLACKHOLE Community</title>
+
+        <author fullname="Thomas King" initials="T." surname="King">
+            <organization abbrev='DE-CIX'>DE-CIX Management GmbH</organization>
+            <address>
+                <postal>
+                    <street>Lichtstrasse 43i</street>
+                    <city>Cologne</city>
+                    <code>50825</code>
+                    <country>Germany</country>
+                </postal>
+                <email>thomas.king@de-cix.net</email>
+            </address>
+        </author>
+
+        <author fullname="Christoph Dietzel" initials="C." surname="Dietzel">
+            <organization abbrev='DE-CIX'>DE-CIX Management GmbH</organization>
+            <address>
+                <postal>
+                    <street>Lichtstrasse 43i</street>
+                    <city>Cologne</city>
+                    <code>50825</code>
+                    <country>Germany</country>
+                </postal>
+                <email>christoph.dietzel@de-cix.net</email>
+            </address>
+        </author>
+
+        <author fullname="Job Snijders" initials="J." surname="Snijders">
+            <organization abbrev="NTT">NTT Communications</organization>
+            <address>
+                <postal>
+                    <street>Theodorus Majofskistraat 100</street>
+                    <code>1065 SZ</code>
+                    <city>Amsterdam</city>
+                    <country>The Netherlands</country>
+                </postal>
+                <email>job@ntt.net</email>
+            </address>
+        </author>
+        <author fullname="Gert Doering" initials="G." surname="Doering">
+            <organization>SpaceNet AG</organization>
+            <address>
+                <postal>
+                    <street>Joseph-Dollinger-Bogen 14</street>
+                    <city>Munich</city>
+                    <code>80807</code>
+                    <country>Germany</country>
+                </postal>
+                <email>gert@space.net</email>
+            </address>
+        </author>
+
+        <author fullname="Greg Hankins" initials="G." surname="Hankins">
+            <organization>Nokia</organization>
+            <address>
+                <postal>
+                    <street>777 E. Middlefield Road</street>
+                    <city>Mountain View</city>
+                    <region>CA</region>
+                    <code>94043</code>
+                    <country>United States of America</country>
+                </postal>
+                <email>greg.hankins@nokia.com</email>
+            </address>
+        </author>
+
+        <date month="October" year="2016" />
+
+        <abstract>
+
+
+            <t>
+                This document describes the use of a well-known Border
+                Gateway Protocol (BGP) community for destination-based
+                blackholing in IP networks. This well-known advisory
+		transitive BGP community named "BLACKHOLE" allows an origin
+                Autonomous System (AS) to specify that a neighboring network should discard
+                any traffic destined towards the tagged IP prefix.
+            </t>
+        </abstract>
+
+
+    </front>
+
+    <middle>
+        <section anchor="intro" title="Introduction">
+            <t>
+                Network infrastructures have been increasingly hampered
+                by DDoS attacks. In order to dampen the effects of these
+                DDoS attacks, IP networks have offered blackholing with
+                <xref target="RFC4271">BGP</xref> using various mechanisms
+                such as those described in <xref target="RFC3882"/> and
+                <xref target="RFC5635"/>.
+            </t>
+
+            <t>
+                DDoS attacks targeting a certain IP address may cause
+                congestion of links used to connect to adjacent networks. In order
+                to limit the impact of such a scenario on legitimate traffic,
+                networks adopted a mechanism called "BGP blackholing". A network
+                that wants to trigger blackholing needs to understand the
+                triggering mechanism adopted by its neighboring networks.
+  Different networks provide different
+  mechanisms to trigger blackholing, including but not limited to pre-
+  defined blackhole next-hop IP addresses, specific BGP communities, or
+  out-of-band BGP sessions with a special BGP speaker.
+            </t>
+
+            <t>
+                Having several different mechanisms to trigger blackholing in
+                different networks makes it an unnecessarily complex,
+                error-prone, and cumbersome task for network operators.
+                Therefore, a well-known <xref target="RFC1997">BGP
+                    community</xref> is defined for operational ease.
+            </t>
+
+            <t>
+                Having such a well-known BGP community for blackholing also
+                further simplifies network operations because:
+                <list style='symbols'>
+                    <t>Implementing and monitoring blackholing becomes easier
+                        when implementation and operational guides do not cover
+                        many variations to trigger blackholing.
+                    </t>
+                    <t>The number of support requests from customers about how
+                        to trigger blackholing in a particular neighboring
+                        network will be reduced as the codepoint for common
+                        blackholing mechanisms is unified and well-known.
+                    </t>
+                </list>
+            </t>
+
+        <section title="Requirements Language">
+
+            <t>
+                The key words "MUST", "MUST NOT", "REQUIRED", "SHALL",
+                "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",
+                "MAY", and "OPTIONAL" are to be interpreted as described
+                in <xref target="RFC2119"/> only when they appear in all
+                upper case. They may also appear in lower case or mixed case
+		as English words,
+                without normative meaning.
+            </t>
+
+        </section>
+        </section>
+
+
+        <section anchor="community" title="BLACKHOLE Community">
+            <t>
+                This document defines the use of a new well-known BGP
+                transitive community, BLACKHOLE.
+            </t>
+
+            <t>
+                The semantics of this community allow a network to interpret
+                the presence of this community as an advisory qualification to drop
+                any traffic being sent towards this prefix.
+            </t>
+        </section>
+
+        <section anchor="recommendation" title="Operational Recommendations">
+            <section anchor="morespecific" title="IP Prefix Announcements with BLACKHOLE Community Attached">
+                <t>
+                    Accepting and honoring the BLACKHOLE community,
+                    or ignoring it, is a choice that is made by each
+                    operator. This community MAY be used in all bilateral
+                    and multilateral BGP deployment scenarios. In a bilateral
+                    peering relationship, use of the BLACKHOLE community MUST
+                    be agreed upon by the two networks before advertising
+                    it. In a multilateral peering relationship, the decision
+                    to honor or ignore the BLACKHOLE community is to be
+                    made according to the operator's routing policy. The
+                    community SHOULD be ignored, if it is received by a
+                    network that it not using it.
+                </t>
+                <t>
+                    When a network is under DDoS duress, it MAY announce
+                    an IP prefix covering the victim's IP address(es)
+                    for the purpose of signaling to neighboring networks
+                    that any traffic destined for these IP address(es)
+                    should be discarded. In such a scenario, the network
+                    operator SHOULD attach the BLACKHOLE community.
+                </t>
+                <t>
+                    The BLACKHOLE community MAY also be used as one of
+                    the trigger communities in a destination-based Remote
+		    Triggered Blackhole (RTBH) 
+<xref target="RFC5635"/> configuration.
+                </t>
+            </section>
+            <section anchor="scope" title="Local Scope of Blackholes">
+                <t>
+                    A BGP speaker receiving an announcement tagged
+                    with the BLACKHOLE community SHOULD add the
+                    NO_ADVERTISE or NO_EXPORT community as defined in
+                    <xref target="RFC1997"/>, or a similar community, to
+                    prevent propagation of the prefix outside the local AS.
+                    The community to prevent propagation SHOULD be chosen
+                    according to the operator's routing policy.
+                </t>
+                <t>
+                    Unintentional leaking of more specific IP prefixes to
+                    neighboring networks can have adverse effects. Extreme
+                    caution should be used when purposefully propagating
+                    IP prefixes tagged with the BLACKHOLE community
+                    outside the local routing domain, unless policy
+                    explicitly aims at doing just that.
+                </t>
+            </section>
+            <section anchor="small" title="Accepting Blackholed IP Prefixes">
+                <t>
+                    It has been observed in provider networks running BGP
+                    that announcements of IP prefixes longer than /24
+                    for IPv4 and /48 for IPv6 are usually not accepted
+                    on the Internet (see <xref target="RFC7454">Section
+                    6.1.3 of</xref>). However, blackhole prefix length should
+                    be as long as possible in order to limit the impact
+                    of discarding traffic for adjacent IP space that is
+                    not under DDoS duress. The blackhole prefix length is
+                    typically as specific as possible, /32 for IPv4 or
+                    /128 for IPv6.
+                </t>
+                <t>
+                    BGP speakers in a bilateral peering relationship using the
+                    BLACKHOLE community MUST only accept and honor BGP
+                    announcements carrying the BLACKHOLE community under the
+                    two following conditions:
+
+                    <list style="symbols">
+                        <t>The announced prefix is covered by an equal or
+                            shorter prefix that the neighboring network is
+                            authorized to advertise.</t>
+                        <t>The receiving party agreed to honor the BLACKHOLE
+                            community on the particular BGP session.</t>
+                    </list>
+
+                    In topologies with a route server or other multilateral
+                    peering relationships, BGP speakers SHOULD accept and honor
+                    BGP announcements under the same conditions.
+                </t>
+                <t>
+                    An operator MUST ensure that origin validation techniques
+                    (such as the one described in <xref target="RFC6811" />) do not inadvertently
+                    block legitimate announcements carrying the BLACKHOLE
+                    community.
+                </t>
+                <t>
+                    The BLACKHOLE community is not intended to be used with
+                     Network Layer Reachability
+		    Information (NLRI) <xref target="RFC5575"/> to distribute traffic
+                    flow specifications.
+                </t>
+                <t>
+                    The error handling for this community follows the
+                    process in <xref target="RFC7606"/> that causes a
+                    malformed community to be treated as withdrawn.
+                </t>
+                <t>
+                    Operators are encouraged to store all BGP updates in their
+                    network carrying the BLACKHOLE community for long-term analysis or
+                    internal audit purposes.
+                </t>
+            </section>
+        </section>
+
+        <section anchor="vendor" title="Vendor Implementation Recommendations">
+            <t>
+                Without an explicit configuration directive set by the
+                operator, network elements SHOULD NOT discard traffic
+                destined towards IP prefixes that are tagged with the
+                BLACKHOLE community. The operator is expected to
+                explicitly configure the network element to honor the
+                BLACKHOLE community in a way that is compliant with the
+                operator's routing policy.
+            </t>
+            <t>
+                Vendors MAY provide a shorthand keyword in their
+                configuration language to reference the well-known
+                BLACKHOLE community attribute value. The suggested
+                string to be used is "blackhole".
+            </t>
+        </section>
+
+        <section anchor="iana" title="IANA Considerations">
+            <t>
+                The IANA has registered BLACKHOLE in the "BGP Well-known Communities" registry.
+
+                <list>
+                    <t>
+                        BLACKHOLE (= 0xFFFF029A)
+                    </t>
+                </list>
+            </t>
+            <t>
+                The low-order two octets in decimal are 666, a value commonly
+                associated with BGP blackholing among network operators.
+            </t>
+        </section>
+
+        <section anchor="security" title="Security Considerations">
+            <t>
+
+                BGP contains no specific mechanism to prevent the unauthorized
+                modification of information by the forwarding agent. 
+   This allows routing information to be modified
+   or removed; it also allows false information to
+   be added by forwarding agents.  
+   Recipients of
+                routing information are not able to detect this modification.
+                <xref target="BGPSEC">BGPsec</xref> does
+                not resolve this situation. Even when BGPsec is in place, a
+                forwarding agent can alter, add, or remove BGP communities.
+            </t>
+            <t>
+                The unauthorized addition of the BLACKHOLE community to an
+                IP prefix by an adversary may cause a denial-of-service attack
+                based on denial of reachability.
+            </t>
+            <t>
+                In order to further limit the impact of unauthorized BGP
+                announcements carrying the BLACKHOLE community, the
+                receiving BGP speaker SHOULD verify by applying strict
+                filtering (see <xref target="RFC7454">Section 6.2.1.1.2 of </xref>)
+                that the peer announcing the prefix is authorized to do so. If
+                not, the BGP announcement should be filtered.
+            </t>
+            <t>
+                BGP announcements carrying the BLACKHOLE community should
+                only be accepted and honored if the neighboring network
+                is authorized to advertise the prefix.  The method of
+                validating announcements is to be chosen according to
+                the operator's routing policy.
+            </t>
+            <t>
+                It is RECOMMENDED that operators use best common practices
+                to protect their BGP sessions, such as the ones in <xref
+                    target="RFC7454"/>.
+            </t>
+        </section>
+
+    </middle>
+
+    <back>
+
+        <references title="Normative References">
+            <?rfc include="reference.RFC.1997"?>
+            <?rfc include="reference.RFC.2119"?>
+            <?rfc include="reference.RFC.4271"?>
+            <?rfc include="reference.RFC.7606"?>
+        </references>
+
+        <references title="Informative References">
+            <?rfc include="reference.RFC.3882"?>
+            <?rfc include="reference.RFC.5575"?>
+            <?rfc include="reference.RFC.5635"?>
+            <?rfc include="reference.RFC.6811"?>
+            <?rfc include="reference.RFC.7454"?>
+
+	    <!-- ietf-sidr-bgpsec-protocol-18 IESG state: Publication Requested -->
+
+<reference anchor='BGPSEC'>
+<front>
+<title>BGPsec Protocol Specification</title>
+
+<author initials='M' surname='Lepinski' fullname='Matthew Lepinski' role="editor">
+    <organization />
+</author>
+
+<author initials='K' surname='Sriram' fullname='Kotikalapudi Sriram' role="editor">
+    <organization />
+</author>
+
+<date month='August' day='18' year='2016' />
+
+</front>
+
+<seriesInfo name='Work in Progress,' value='draft-ietf-sidr-bgpsec-protocol-18' />
+<format type='TXT'
+        target='http://www.ietf.org/internet-drafts/draft-ietf-sidr-bgpsec-protocol-18.txt' />
+</reference>
+
+        </references>
+
+        <section anchor="acknowledgements" title="Acknowledgements" numbered="no">
+            <t>
+                The authors would like to gratefully acknowledge many people
+                who have contributed discussions and ideas to the development of
+                this document. They include Petr Jiran, Yordan Kritski,
+                Christian Seitz, Nick Hilliard, Joel Jaeggli, Christopher
+                Morrow, Thomas Mangin, Will Hargrave, Niels Bakker, David
+                Farmer, Jared Mauch, John Heasley, and Terry Manderson.
+            </t>
+        </section>
+    </back>
+
+</rfc>
