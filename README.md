@@ -34,9 +34,9 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [Cisco](https://www.cisco.com/) | Open |
 | [Juniper](https://www.juniper.com/) | Open |
 | [Brocade](https://www.brocade.com/) | Open |
-| [Huawi](huawei.com) | Open |
+| [Huawaei](http://www.huawaei.com) | Open |
 
 ## History ##
 * Discussions started during [EURO-IX](http://www.euro-ix.net)
 * ...
-* Working Group Last Call:
+* Working Group Last Call
