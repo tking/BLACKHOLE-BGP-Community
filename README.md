@@ -28,6 +28,6 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [Huawi](huawei.com) | Open |
 
 ## History ##
-* Discussions started during (EURO-IX)[http://www.euro-ix.net]
+* Discussions started during [EURO-IX](http://www.euro-ix.net)
 * ...
 * Working Group Last Call:
