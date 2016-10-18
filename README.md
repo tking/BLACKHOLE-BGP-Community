@@ -6,6 +6,15 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 * RFC-to-be https://www.rfc-editor.org/authors/rfc7999.txt
 * Datatracker: https://datatracker.ietf.org/doc/draft-ietf-grow-blackholing/
 
+## Supporting ISPs and IXPs ##
+### Supporting ISPs
+
+### Supporting IXPs
+| IXP | Information |
+|-----| ----------- |
+| [DE-CIX](https://www.de-cix.net) FRA, NYC, MAD, DUS, MUC, HAM, IST, PMO, MRS  | https://de-cix.net/en/services/globepeer/blackholing |
+| NYIIX | |
+
 ## Supporting BGP Speakers ##
 | BGP Speaker   | Implementation Status |
 | ------------- | ------------- |
