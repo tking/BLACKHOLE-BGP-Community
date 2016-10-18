@@ -28,7 +28,7 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [BIRD](http://bird.network.cz/)  | Requested |
 | [GoBGP](https://github.com/osrg/gobgp) | [Done](https://github.com/osrg/gobgp/issues/1136) |
 | [OpenBGPD](http://www.openbgpd.org/) | [Done](http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.sbin/bgpd/bgpd.h.diff?r1=1.290&r2=1.291&f=h) - Usage hint: "allow from any community BLACKHOLE set nexthop blackhole" |
-| [ExaBGP](https://github.com/Exa-Networks/exabgp) | Requested |
+| [ExaBGP](https://github.com/Exa-Networks/exabgp) | Requested |
 | [Nokia](https://networks.nokia.com/) | Requested |
 | [Cisco](https://www.cisco.com/) | Open |
 | [Juniper](https://www.juniper.com/) | Open |
