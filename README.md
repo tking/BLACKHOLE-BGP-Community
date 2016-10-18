@@ -8,12 +8,18 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 
 ## Supporting ISPs and IXPs ##
 ### Supporting ISPs
+| ISP | Information |
+|-----| ----------- |
+| KPN | https://as286.net/AS286-communities.html |
 
 ### Supporting IXPs
 | IXP | Information |
 |-----| ----------- |
 | [DE-CIX](https://www.de-cix.net) FRA, NYC, MAD, DUS, MUC, HAM, IST, PMO, MRS  | https://de-cix.net/en/services/globepeer/blackholing |
-| NYIIX | |
+| [NYIIX](http://www.nyiix.net) | http://www.nyiix.net/rtbh/ |
+| [CIX.HR](https://www.cix.hr) | https://www.cix.hr/o-cix-u/infrastruktura/route-server |
+| [Community-IX](https://www.community-ix.de) | https://www.community-ix.de/technik/ |
+| [LAIIX](http://www.laiix.net/)| http://www.laiix.net/rtbh/ |
 
 ## Supporting BGP Speakers ##
 | BGP Speaker   | Implementation Status |
