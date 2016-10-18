@@ -20,6 +20,7 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [CIX.HR](https://www.cix.hr) | https://www.cix.hr/o-cix-u/infrastruktura/route-server |
 | [Community-IX](https://www.community-ix.de) | https://www.community-ix.de/technik/ |
 | [LAIIX](http://www.laiix.net/)| http://www.laiix.net/rtbh/ |
+| [Equinix](https://ix.equinix.com/) | http://www.sanog.org/resources/sanog28/SANOG28-Conference_RTBH-Safiudeen.pdf |
 
 ## Supporting BGP Speakers ##
 | BGP Speaker   | Implementation Status |
