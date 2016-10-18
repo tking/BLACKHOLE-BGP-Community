@@ -10,7 +10,8 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 ### Supporting ISPs
 | ISP | Information |
 |-----| ----------- |
-| KPN | https://as286.net/AS286-communities.html |
+| [KPN](http://www.kpn-international.com/ip-transit) | https://as286.net/AS286-communities.html |
+| [SysEleven](http://www.syseleven.de/) | |
 
 ### Supporting IXPs
 | IXP | Information |
