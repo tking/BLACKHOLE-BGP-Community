@@ -3,7 +3,7 @@
 The introduction of a well-known Border Gateway Protocol (BGP) community for destination-based blackholing in IP networks.  This well-known advisory transitive BGP community named BLACKHOLE allows an origin AS to specify that a neighboring network should discard any traffic destined towards the tagged IP prefix.
 
 ## Status ##
-* RFC-to-be https://www.rfc-editor.org/authors/rfc7999.txt
+* Task accomplished: RFC 7999: https://tools.ietf.org/html/rfc7999
 * Datatracker: https://datatracker.ietf.org/doc/draft-ietf-grow-blackholing/
 
 ## Supporting ISPs and IXPs ##
