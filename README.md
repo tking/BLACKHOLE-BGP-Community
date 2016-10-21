@@ -10,8 +10,10 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 ### Supporting ISPs
 | ISP | Information |
 |-----| ----------- |
-| [KPN](http://www.kpn-international.com/ip-transit) | https://as286.net/AS286-communities.html |
-| [SysEleven](http://www.syseleven.de/) | |
+| [KPN (AS286)](http://www.kpn-international.com/ip-transit) | https://as286.net/AS286-communities.html |
+| [SysEleven (AS25291)](http://www.syseleven.de/) | |
+| [Strato AG (AS6724)](http://www.strato.de) | |
+| [Individual Network Berlin e.V. (AS29670)] | |
 
 ### Supporting IXPs
 | IXP | Information |
