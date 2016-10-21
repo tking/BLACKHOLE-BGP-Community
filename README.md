@@ -13,7 +13,7 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [KPN (AS286)](http://www.kpn-international.com/ip-transit) | https://as286.net/AS286-communities.html |
 | [SysEleven (AS25291)](http://www.syseleven.de/) | |
 | [Strato AG (AS6724)](http://www.strato.de) | |
-| [Individual Network Berlin e.V. (AS29670)] | |
+| [Individual Network Berlin e.V. (AS29670)](https://in-berlin.de/) | |
 
 ### Supporting IXPs
 | IXP | Information |
