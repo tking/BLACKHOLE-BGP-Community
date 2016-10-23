@@ -14,6 +14,8 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | [SysEleven (AS25291)](http://www.syseleven.de/) | |
 | [Strato AG (AS6724)](http://www.strato.de) | |
 | [Individual Network Berlin e.V. (AS29670)](https://in-berlin.de/) | |
+| [Coloclue (AS8283)](http://coloclue.net/) | |
+| [Fusix Networks (AS57866)](http://fusix.nl/) | |
 
 ### Supporting IXPs
 | IXP | Information |
