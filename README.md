@@ -11,7 +11,7 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 | ISP | Information |
 |-----| ----------- |
 | [KPN (AS286)](http://www.kpn-international.com/ip-transit) | https://as286.net/AS286-communities.html |
-| [SysEleven (AS25291)](http://www.syseleven.de/) | |
+| [SysEleven (AS25291)](http://www.syseleven.de/) | https://isp.syseleven.net/communities/#communities-for-customers |
 | [Strato AG (AS6724)](http://www.strato.de) | |
 | [Individual Network Berlin e.V. (AS29670)](https://in-berlin.de/) | |
 | [Coloclue (AS8283)](http://coloclue.net/) | |
