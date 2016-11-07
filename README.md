@@ -7,6 +7,8 @@ The introduction of a well-known Border Gateway Protocol (BGP) community for des
 * Datatracker: https://datatracker.ietf.org/doc/draft-ietf-grow-blackholing/
 
 ## Supporting ISPs and IXPs ##
+If you want to be listed please drop me mail: thomas.king@de-cix.net
+
 ### Supporting ISPs
 | ISP | Information |
 |-----| ----------- |
