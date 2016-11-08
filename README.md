@@ -54,9 +54,9 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 * “Internet Draft” submitted to IETF GROW working group
 * Discussion on the GROW mailing list and during the IETF 93
 * Requests from Euro-IX and GROW:
-** Also add ISPs
-*** Be more specific about “Operations Recommendations”
-*** Call for “Working Group” adaption (result is pending – looks good)
+ * Also add ISPs
+  * Be more specific about “Operations Recommendations”
+  * Call for “Working Group” adaption (result is pending – looks good)
 
 ### 2016 ###
 * Working Group Last Call – all few changes
