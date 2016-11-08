@@ -44,9 +44,23 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [Huawaei](http://www.huawaei.com) | Open |
 
 ## History ##
-* Discussions started during [EURO-IX](http://www.euro-ix.net)
-* ...
-* Working Group Last Call
+### 2014 ###
+* Euro-IX tech mailing list: Discussion on commonly agreed BLACKHOLE community
+* 25th Euro-IX Forum: Presentation and panel about Blackholing
+* Work on an “Internet Draft” started. Authors: King, Dietzel (DE-CIX), Döring (SpaceNet), Hankins (Alu), Jiran (NIX.CZ), Kritski (NetIX), Seitz (STRATO)
+
+### 2015 ###
+* Draft of “Internet Draft” discussed on the Euro-IX tech mailing list
+* “Internet Draft” submitted to IETF GROW working group
+* Discussion on the GROW mailing list and during the IETF 93
+* Requests from Euro-IX and GROW:
+** Also add ISPs
+*** Be more specific about “Operations Recommendations”
+*** Call for “Working Group” adaption (result is pending – looks good)
+
+### 2016 ###
+* Working Group Last Call – all few changes
+* Release of RFC 7999
 
 ## Special Thanks ##
 * [Euro-IX](http://www.euro-ix.net)
