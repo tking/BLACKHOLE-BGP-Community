@@ -47,3 +47,7 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 * Discussions started during [EURO-IX](http://www.euro-ix.net)
 * ...
 * Working Group Last Call
+
+## Special Thanks ##
+* [Euro-IX](http://www.euro-ix.net)
+* [GROW Working Group](https://datatracker.ietf.org/wg/grow/charter/)
