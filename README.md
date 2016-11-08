@@ -55,8 +55,8 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 * Discussion on the GROW mailing list and during the IETF 93
 * Requests from Euro-IX and GROW:
  * Also add ISPs
-   * Be more specific about “Operations Recommendations”
-   * Call for “Working Group” adaption (result is pending – looks good)
+ * Be more specific about “Operations Recommendations”
+* Call for “Working Group” adaption
 
 ### 2016 ###
 * Working Group Last Call – all few changes
