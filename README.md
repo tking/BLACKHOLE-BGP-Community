@@ -29,6 +29,7 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [LAIIX](http://www.laiix.net/)| http://www.laiix.net/rtbh/ |
 | [Equinix](https://ix.equinix.com/) Ashburn, Atlanta, Chicago, Dallas, Los Angeles, Miami, New York, Palo Alto, San Jose, Seattle, Toronto, Vienna, Geneva, Paris, Zurich, Hong Kong, Melbourne, Osaka, Singapore, Sydney, Tokyo | http://www.sanog.org/resources/sanog28/SANOG28-Conference_RTBH-Safiudeen.pdf |
 | [MSK-IX](http://www.msk-ix.ru/en/) Moscow, St.-Petersburg, Rostov-on-Don, Stavropol, Samara, Kazan, Ekaterinburg, Novosibirsk, Vladivostok | http://kb.msk-ix.ru/en/ix/services/route-server/#ddos |
+| [SIX](https://www.seattleix.net/) Seattle | https://www.seattleix.net/blackholing |
 
 ## Supporting BGP Speakers ##
 | BGP Speaker   | Implementation Status |
