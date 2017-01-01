@@ -44,7 +44,7 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [Cisco](https://www.cisco.com/) | Open |
 | [Juniper](https://www.juniper.com/) | Open |
 | [Brocade](https://www.brocade.com/) | Open |
-| [Huawaei](http://www.huawaei.com) | Open |
+| [Huawei](http://www.huawei.com) | Open |
 
 ## History ##
 ### 2014 ###
