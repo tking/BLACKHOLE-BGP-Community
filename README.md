@@ -18,6 +18,7 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [Individual Network Berlin e.V. (AS29670)](https://in-berlin.de/) | |
 | [Coloclue (AS8283)](http://coloclue.net/) | |
 | [Fusix Networks (AS57866)](http://fusix.nl/) | |
+| [BelWü (AS553)](http://belwue.de) | |
 
 ### Supporting IXPs
 | IXP | Information |
