@@ -68,3 +68,4 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 ## Special Thanks ##
 * [Euro-IX](http://www.euro-ix.net)
 * [GROW Working Group](https://datatracker.ietf.org/wg/grow/charter/)
+* [ECO KG Gruppe Netz Infrastruktur](https://netz-infrastruktur.eco.de/) 
