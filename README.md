@@ -33,6 +33,11 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [SIX](https://www.seattleix.net/) Seattle | https://www.seattleix.net/blackholing |
 | [France IX](https://www.franceix.net) Paris and Marseille | https://www.franceix.net/en/technical/blackholing/ |
 
+## Supporting Anti-DDoS Software ##
+| Software | Information |
+|-----| ----------- |
+| [FastNetMonDE-CIX](https://github.com/pavel-odintsov/fastnetmon) | https://github.com/pavel-odintsov/fastnetmon/commit/b86b2de12c64fba5b2c948567ac1c20e0271e677 |
+
 ## Supporting BGP Speakers ##
 | BGP Speaker   | Implementation Status |
 | ------------- | ------------- |
