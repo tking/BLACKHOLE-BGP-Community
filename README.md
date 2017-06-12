@@ -32,6 +32,7 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [MSK-IX](http://www.msk-ix.ru/en/) Moscow, St.-Petersburg, Rostov-on-Don, Stavropol, Samara, Kazan, Ekaterinburg, Novosibirsk, Vladivostok | http://kb.msk-ix.ru/en/ix/services/route-server/#ddos |
 | [SIX](https://www.seattleix.net/) Seattle | https://www.seattleix.net/blackholing |
 | [France IX](https://www.franceix.net) Paris and Marseille | https://www.franceix.net/en/technical/blackholing/ |
+| [NIX.CZ](https://www.nix.cz) | https://www.nix.cz/en/technical#rs | 
 
 ## Supporting Anti-DDoS Software ##
 | Software | Implementation Status | Information |
