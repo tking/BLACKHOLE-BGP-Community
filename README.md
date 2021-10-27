@@ -33,6 +33,8 @@ If you want to be listed please drop me mail: thomas.king@de-cix.net
 | [SIX](https://www.seattleix.net/) Seattle | https://www.seattleix.net/blackholing |
 | [France IX](https://www.franceix.net) Paris and Marseille | https://www.franceix.net/en/technical/blackholing/ |
 | [NIX.CZ](https://www.nix.cz) | https://www.nix.cz/en/technical#rs | 
+| [SwissIX](https://www.swissix.ch) | [Documentation](https://rs1.swissix.ch/rs1.html)| 
+| [BIX](https://www.bix.ch) | only one, no redistribution to Peers [Documentation](https://www.bix.bg/en/technical_information/ddos-mitigation.html)| 
 
 ## Supporting Anti-DDoS Software ##
 | Software | Implementation Status | Information |
